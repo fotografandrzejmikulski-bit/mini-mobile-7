@@ -1,0 +1,46 @@
+# MINI-MOBILE-7 — UERANSIM UE template for internal slot 7001
+# Authentication values are intentionally placeholders and MUST be supplied
+# only on the deployment host. Never commit Ki/OP/OPc to GitHub.
+# UERANSIM version: v3.3.0
+
+supi: 'imsi-001010000000001'
+# imei: '356938035643809'
+# imeiSv: '437081612581615'
+
+mnc: '01'
+mcc: '001'
+
+# Replace these placeholders locally with the exact subscriber record.
+key: 'REPLACE_WITH_32_HEX_KEY'
+opc: 'REPLACE_WITH_32_HEX_OPC'
+amf: '8000'
+
+sessions:
+  - type: IPv4
+    apn: internet
+    slice:
+      sst: 1
+
+configured-nssai:
+  - sst: 1
+
+default-nssai:
+  - sst: 1
+
+gnbSearchList:
+  - 10.10.0.6
+
+tunName: uesimtun
+
+integrity:
+  IA1: true
+  IA2: true
+  IA3: true
+
+ciphering:
+  EA1: true
+  EA2: true
+  EA3: true
+
+# Do not add a fixed UE IP here unless the Open5GS subscriber/session
+# configuration is explicitly designed for static addressing.
