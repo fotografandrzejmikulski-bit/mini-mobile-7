@@ -9,6 +9,9 @@
 secrets/
 private/
 credentials/
+local/
+*.local.yaml
+*.local.yml
 
 # Local runtime state
 *.log
