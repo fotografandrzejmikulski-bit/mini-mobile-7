@@ -28,10 +28,11 @@ sudo apt update
 sudo apt install -y open5gs
 
 # Create the lab TUN interface used for UE traffic.
+# Keep this aligned with MINI-MOBILE-7's documented UE_CIDR.
 if ! ip link show ogstun >/dev/null 2>&1; then
   sudo ip tuntap add name ogstun mode tun
 fi
-sudo ip addr replace 10.45.0.1/16 dev ogstun
+sudo ip addr replace 10.20.0.1/24 dev ogstun
 sudo ip link set ogstun up
 
 # Enable IPv4 forwarding for later controlled UE->WAN NAT configuration.
