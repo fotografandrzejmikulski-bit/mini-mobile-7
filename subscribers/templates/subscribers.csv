@@ -1,0 +1,11 @@
+slot,internal_id,imsi,ue_ip,status
+1,7001,001010000000001,10.20.0.11,TEMPLATE
+2,7002,001010000000002,10.20.0.12,TEMPLATE
+3,7003,001010000000003,10.20.0.13,TEMPLATE
+4,7004,001010000000004,10.20.0.14,TEMPLATE
+5,7005,001010000000005,10.20.0.15,TEMPLATE
+6,7006,001010000000006,10.20.0.16,TEMPLATE
+7,7007,001010000000007,10.20.0.17,TEMPLATE
+
+# Synthetic lab values only. Replace with generated test identities during deployment.
+# Never add Ki, OP/OPc or other authentication secrets to this file.
