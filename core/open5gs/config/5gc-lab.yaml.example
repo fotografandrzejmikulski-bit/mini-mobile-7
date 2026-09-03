@@ -1,0 +1,20 @@
+# MINI-MOBILE-7 — Open5GS 5GC lab reference
+# Sanitized example. Do not place subscriber authentication secrets here.
+#
+# Intended logical core address: 10.10.0.5
+# UE pool: 10.20.0.0/24
+# PLMN: 001/01 (international test PLMN; use a regulator-issued PLMN when required)
+# TAC: 1, S-NSSAI SST: 1, DNN: internet
+#
+# This file is a reference, not a drop-in replacement for /etc/open5gs/*.yaml.
+# Keep the installed Open5GS version pinned to v2.8.0.
+
+# Core components that must be aligned:
+#   NRF  -> serving PLMN 001/01
+#   AMF  -> NGAP bind 10.10.0.5, PLMN 001/01, TAC 1, SST 1
+#   SMF  -> DNN internet, UE subnet 10.20.0.0/24, UPF selection
+#   UPF  -> PFCP/ GTP-U bind on the selected core interface, UE subnet 10.20.0.0/24
+#   UDR/UDM/AUSF/PCF/NSSF/SCP -> default local SBA topology unless intentionally separated
+#
+# For exact YAML keys and defaults, use the Open5GS v2.8.0 configuration templates
+# installed by the package and modify only the required values.
