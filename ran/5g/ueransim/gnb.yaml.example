@@ -1,0 +1,28 @@
+# MINI-MOBILE-7 — UERANSIM gNB lab template
+# No RF is transmitted. This is a software-only NG-RAN simulation.
+# UERANSIM version: v3.3.0
+
+mcc: 001
+mnc: 01
+nci: 0x000000001
+idLength: 32
+
+tac: 1
+linkIp: 10.10.0.6
+ngapIp: 10.10.0.6
+gtpIp: 10.10.0.6
+
+amfConfigs:
+  - address: 10.10.0.5
+    port: 38412
+
+slices:
+  - sst: 1
+
+ignoreStreamIds: true
+
+# IMPORTANT:
+# 10.10.0.5 must be reachable from the UERANSIM host and must be the
+# Open5GS AMF NGAP address used by this lab. If gNB and core share one host,
+# loopback addressing may be used instead, provided both sides are configured
+# consistently.
