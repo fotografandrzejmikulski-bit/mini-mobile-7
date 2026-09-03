@@ -4,7 +4,9 @@ This directory is the deployment anchor for the Open5GS Core.
 
 ## Target
 
-Use Open5GS 5GC/EPC according to the selected lab architecture. The upstream project currently lists v2.7.7 as its latest tagged release. Pin the version during deployment rather than silently tracking `latest`.
+Use Open5GS 5GC/EPC according to the selected lab architecture. The current upstream release is **v2.8.0** (Release 19). Pin the version during deployment rather than silently tracking `latest`.
+
+The project should prefer v2.8.0 for the initial deployment because it is the current upstream release and includes security and protocol updates over v2.7.7.
 
 ## Required services for the first lab
 
@@ -18,10 +20,11 @@ Use Open5GS 5GC/EPC according to the selected lab architecture. The upstream pro
 - Keep management UI behind VPN/firewall.
 - Put subscriber authentication material outside Git.
 - Start with one synthetic subscriber, then scale to seven.
+- Keep the UE address pool aligned with the addressing plan in `docs/addressing.md`.
 
 ## Deployment reference
 
-Use the upstream Open5GS documentation and repository Docker examples as the authoritative implementation reference for the exact release selected at deployment time.
+Use the upstream Open5GS documentation and repository release/tag as the authoritative implementation reference for v2.8.0. Verify release notes before every production-like deployment.
 
 ## Completion gate
 
